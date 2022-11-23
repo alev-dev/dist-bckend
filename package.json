@@ -1,0 +1,33 @@
+{
+    "name": "distribuidora-backend",
+    "version": "1.0.0",
+    "description": "\"# distribuidora-bckd\"",
+    "main": "index.js",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.1",
+        "dotenv-safe": "^8.2.0",
+        "express": "^4.18.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.3.4",
+        "nodemon": "^2.0.16",
+        "socket.io": "^4.5.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node src/index.js",
+        "dev": "nodemon src/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alev-dev/esoft-bckd.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/alev-dev/esoft-bckd/issues"
+    },
+    "homepage": "https://github.com/alev-dev/esoft-bckd#readme"
+}
