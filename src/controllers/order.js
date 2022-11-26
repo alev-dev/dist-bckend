@@ -44,6 +44,13 @@ const orderController = {
         await orderModel
             .create(req.body)
             .then((order) => {
+                // Remove stock from products
+                order.products.forEach(async (product) => {
+                    const productModel = require('../models/product');
+                    await productModel.findByIdAndUpdate(product.product, {
+                        $inc: { stock: -product.quantity },
+                    });
+                });
                 res.json(order);
             })
             .catch((err) => {
