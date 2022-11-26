@@ -12,6 +12,18 @@ const productController = {
             });
     },
 
+    getProductsByCategory: async (req, res) => {
+        const { category } = req.params;
+        await productModel
+            .find({ category })
+            .then((products) => {
+                res.json(products);
+            })
+            .catch((err) => {
+                res.json(err);
+            });
+    },
+
     getProduct: async (req, res) => {
         await productModel
             .findById(req.params.id)

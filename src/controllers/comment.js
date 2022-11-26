@@ -15,6 +15,8 @@ const commentController = {
     getCommentsByProduct: async (req, res) => {
         await commentModel
             .find({ product: req.params.id })
+            .populate('user')
+            .populate('product')
             .then((comments) => {
                 res.json(comments);
             })
